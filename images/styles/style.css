@@ -1,5 +1,10 @@
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+.top{
+    background-color: blue;
+    height: 65px;
+    
+}
 /* common style or utilits*/
   body{
     font-family: 'Poppins', sans-serif;
@@ -72,4 +77,56 @@ hr{
 .blog-author a{
     color: blueviolet;
     font-size: 16px;
+}
+/*---------------
+ courses style  
+ ----------------*/
+ .course .course-banner img{
+     width: 224px;
+     height: 104;
+    }
+.courses{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-column-gap: 24px;
+}
+ 
+ .course-info{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+ .fa-star{
+     font-size: 12px;
+ }
+ .fa-star.filled{
+     color: #FFC014;
+ }
+ .fa-star.empty{
+     color: #AEAEAE;
+ }
+ /*----------
+  media quyeris  
+  ---------------*/
+
+ /* Mobile devices  */
+@media only screen and (max-width:680px)  {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player .blogs{
+        flex-direction: column;
+    }
+}
+/* Tablet Devices  */
+@media only screen and(min-width: 688px) and (max-width: 992px) {
+    .container{
+        width: 100%;
+    }
+    .players, .courses{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
